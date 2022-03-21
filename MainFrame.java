@@ -14,7 +14,7 @@ import java.awt.Color;
 
 public class MainFrame extends JFrame {
 
-    private JPanel contentPane;	// Testkommentar
+    private JPanel contentPane;
     private JTextField vornameField;
     private JTextField nachnameField;
     private JTextField gebDatField;
