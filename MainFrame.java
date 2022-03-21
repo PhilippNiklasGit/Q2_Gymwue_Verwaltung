@@ -14,8 +14,10 @@ import java.awt.Color;
 
 public class MainFrame extends JFrame {
 
-    private JPanel contentPane; // Testkommentar?
-    private JTextField vornameField; // ccc
+    private JPanel contentPane;
+    private JTextField vornameField
+    private JPanel contentPane; // Testkommentar? bbb
+    private JTextField vornameField;
     private JTextField nachnameField;
     private JTextField gebDatField;
     private String[] newUsers = parseListToArray(Verwaltung.gymWueUser);
