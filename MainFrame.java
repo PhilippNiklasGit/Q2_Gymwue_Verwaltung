@@ -11,12 +11,11 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Font;
 
 public class MainFrame extends JFrame {
 
     private JPanel contentPane;
-    private JTextField vornameField
-    private JPanel contentPane; // Testkommentar? bbb
     private JTextField vornameField;
     private JTextField nachnameField;
     private JTextField gebDatField;
@@ -25,11 +24,11 @@ public class MainFrame extends JFrame {
     private User selectedUser = null;
 
 
-    public FensterMeineErsteGUI() {
+    public MainFrame() {
 		//User[] t = (User[]) Verwaltung.gymWueUser.toArray();
         setTitle("Meine erste GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 150, 800, 270); // 400 + 260
+        setBounds(250, 200, 800, 600); //1. x; 2. y; 3. Weite; 4. Höhe
         
          
          contentPane = new JPanel();
@@ -91,7 +90,7 @@ public class MainFrame extends JFrame {
          
          //guiUserList.setCellRenderer(new SelectedListCellRenderer()); 
          JScrollPane guiScroll = new JScrollPane();
-         guiScroll.setBounds(400,15, 355, 200);
+         guiScroll.setBounds(400,20, 370, 495);
          guiScroll.setViewportView(guiUserList);
          contentPane.add(guiScroll);
          //guiUserList.setBounds(400,15, 355, 200);
@@ -102,7 +101,8 @@ public class MainFrame extends JFrame {
 
          JButton submitButton = new JButton("add");
          submitButton.setBackground(Color.decode("#3C4644"));
-         submitButton.setForeground(Color.decode("#000000"));
+         submitButton.setForeground(Color.decode("#FFFFFF"));
+         submitButton.setFont(new Font("ARIAL", Font.PLAIN, 15));
          submitButton.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent arg0) {
@@ -112,12 +112,31 @@ public class MainFrame extends JFrame {
                
             }
         });
-        submitButton.setBounds(260, 190, 115, 25);
+        submitButton.setBounds(260, 190, 115, 30);
         contentPane.add(submitButton);
 
+
+         JButton testButton = new JButton("⇽");
+         testButton.setBackground(Color.decode("#3C4644"));
+         testButton.setForeground(Color.decode("#FFFFFF"));
+         testButton.setBounds(410, 530, 60, 25);
+         testButton.setForeground(Color.WHITE);
+         testButton.setFont(new Font("Arial", Font.PLAIN, 28));
+         contentPane.add(testButton);
+         
+         JButton test1Button = new JButton("⇾");
+         test1Button.setBackground(Color.decode("#3C4644"));
+         test1Button.setForeground(Color.decode("#FFFFFF"));
+         test1Button.setBounds(680, 530, 60, 25);
+         test1Button.setForeground(Color.WHITE);
+         test1Button.setFont(new Font("Arial", Font.PLAIN, 28));
+         contentPane.add(test1Button);
+         
+         
         JButton editButton = new JButton("edit");
         editButton.setBackground(Color.decode("#3C4644"));
-        editButton.setForeground(Color.decode("#000000"));
+        editButton.setForeground(Color.decode("#FFFFFF"));
+        editButton.setFont(new Font("ARIAL", Font.PLAIN, 15));
         editButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -137,12 +156,13 @@ public class MainFrame extends JFrame {
                 }
             }
         });
-        editButton.setBounds(140, 190, 120, 25);
+        editButton.setBounds(140, 190, 120, 30);
         contentPane.add(editButton);
 
         JButton deleteButton = new JButton("delete");
         deleteButton.setBackground(Color.decode("#3C4644"));
-        deleteButton.setForeground(Color.decode("#000000"));
+        deleteButton.setForeground(Color.decode("#FFFFFF"));
+        deleteButton.setFont(new Font("ARIAL", Font.PLAIN, 15));
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -161,7 +181,7 @@ public class MainFrame extends JFrame {
 
             }
         });
-        deleteButton.setBounds(25, 190, 115, 25);
+        deleteButton.setBounds(25, 190, 115, 30);
         contentPane.add(deleteButton);
 
 
